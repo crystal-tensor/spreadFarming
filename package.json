@@ -1,0 +1,11 @@
+{
+  "name": "polymarket-farmer-ui",
+  "version": "1.0.0",
+  "description": "Web interface for Polymarket Spread Farmer",
+  "scripts": {
+    "dev": "nohup ./.venv/bin/python spreadFarming.py > simulation.log 2>&1 & lite-server"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

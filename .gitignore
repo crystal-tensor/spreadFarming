@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.env
+
+# Logs
+*.log
+live_trading_report.csv
+live_trading_report.html
+simulation_trades.csv
+simulation_report.html
+
+# Node
+node_modules/
+
+# OS
+.DS_Store

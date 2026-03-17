@@ -1,0 +1,9 @@
+{
+  "server": {
+    "baseDir": "./",
+    "index": "live_trading_report.html"
+  },
+  "files": ["./live_trading_report.html"],
+  "port": 61522,
+  "startPath": "/live_trading_report.html"
+}
