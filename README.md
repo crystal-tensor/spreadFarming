@@ -7,7 +7,7 @@ A Python bot that scans Polymarket for spread arbitrage opportunities (Buy YES +
 - **Automated Scanning**: Scans active markets for price discrepancies.
 - **Live Trading**: Automatically buys YES and NO shares when the combined cost is less than 1.0 (minus fees).
 - **Profit Tracking**: Logs every trade to a CSV file.
-- **Real-time Dashboard**: A local web server (`live_trading_report.html`) to visualize PnL and trade history.
+- **Real-time Dashboard**: A local web server (`index.html`) to visualize PnL and trade history.
 
 ## Prerequisites
 
@@ -64,7 +64,7 @@ Launch the local web server to view your trading report.
 ```bash
 npm run dev
 ```
-- Open `http://localhost:61522/live_trading_report.html` in your browser.
+- Open `http://localhost:61522/index.html` in your browser.
 - The page updates automatically as new trades occur.
 
 ## Strategy

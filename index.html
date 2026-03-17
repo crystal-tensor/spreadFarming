@@ -1,0 +1,89 @@
+
+    <!DOCTYPE html>
+    <html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>Polymarket 模拟交易收益报告</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f7f6; color: #333; }
+            .container { max-width: 1000px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+            canvas { background: #fff; border-radius: 8px; margin-bottom: 30px; }
+            .stats { display: flex; justify-content: space-between; margin-bottom: 20px; padding: 15px; background: #eef; border-radius: 8px; font-size: 1.1em; }
+            .stats div { text-align: center; }
+            h2, h3 { color: #2c3e50; text-align: center; }
+            table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.9em; }
+            th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+            th { background-color: #f8f9fa; font-weight: bold; position: sticky; top: 0; }
+            tr:nth-child(even) { background-color: #f9f9f9; }
+            tr:hover { background-color: #f1f1f1; }
+            .table-container { max-height: 400px; overflow-y: auto; border: 1px solid #ddd; border-radius: 4px; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Polymarket 价差套利实盘收益报告</h2>
+            <div class="stats">
+                <div><strong>初始资金</strong><br>$10000.00</div>
+                <div><strong>当前资金</strong><br>$10000.00</div>
+                <div><strong>总收益率</strong><br>0.00%</div>
+                <div><strong>交易次数</strong><br>0</div>
+            </div>
+            
+            <canvas id="yieldChart"></canvas>
+
+            <h3>交易明细</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>时间</th>
+                            <th>市场ID</th>
+                            <th>YES 价格</th>
+                            <th>NO 价格</th>
+                            <th>费率</th>
+                            <th>总成本</th>
+                            <th>预期收入</th>
+                            <th>净利润</th>
+                            <th>收益率</th>
+                            <th>账户余额</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script>
+            const ctx = document.getElementById('yieldChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        label: '账户净值 (USD)',
+                        data: [],
+                        borderColor: '#2980b9',
+                        backgroundColor: 'rgba(41, 128, 185, 0.2)',
+                        borderWidth: 2,
+                        pointRadius: 3,
+                        tension: 0.1,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { position: 'top' }
+                    },
+                    scales: {
+                        x: { display: false }, // 隐藏x轴标签以免太拥挤
+                        y: { beginAtZero: false }
+                    }
+                }
+            });
+        </script>
+    </body>
+    </html>
+    

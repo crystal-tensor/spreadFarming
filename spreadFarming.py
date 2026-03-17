@@ -27,7 +27,7 @@ TARGET_SPREAD = 0.01       # 目标毛利空间 (例如 1 - 0.99 = 0.01)
 # 模拟交易记录配置
 SIMULATION_MODE = False
 TRADE_LOG_FILE = "live_trading_report.csv"
-HTML_REPORT_FILE = "live_trading_report.html"
+HTML_REPORT_FILE = "index.html"
 
 # 初始模拟资金
 INITIAL_CAPITAL = 10000.0
